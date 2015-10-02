@@ -36,7 +36,8 @@ set -e
 # debug
 # set -x
 
-shopt -s extglob
+# comment out for test
+#shopt -s extglob
 
 function error() {
   echo " !     $*" >&2
