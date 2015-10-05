@@ -31,5 +31,7 @@ end
 puts "------pwd: "
 system("pwd")
 
+puts $build_dir
+
 _shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR $build_dir /tmp/buildpacks"
 system("bash #{_shellScript}")
