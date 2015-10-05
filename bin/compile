@@ -20,7 +20,7 @@ system("pwd")
 puts "------contents:"
 system("ls")
 
-_shellScript = "./compileForR"
+_shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR"
 system("sh #{_shellScript}")
 
 $stdout.sync = true
