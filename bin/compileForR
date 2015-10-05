@@ -80,6 +80,10 @@ VENDOR_DIR="$BUILD_DIR/vendor"
 R_HOME="$VENDOR_DIR/R"
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
+echo $1
+echo "----------"
+echo $2
+
 mkdir -p $CACHE_DIR
 
 # vendor R into the slug
