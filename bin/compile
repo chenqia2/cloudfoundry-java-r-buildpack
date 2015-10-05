@@ -17,11 +17,11 @@
 puts "------pwd: "
 system("pwd")
 
-puts "------contents:"
-system("ls /tmp/buildpacks/java-buildpack/")
+puts "------shopt:"
+system("which shopt")
 
 _shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR"
-system("sh #{_shellScript}")
+system( _shellScript )
 
 $stdout.sync = true
 $stderr.sync = true
