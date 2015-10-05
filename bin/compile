@@ -14,14 +14,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-puts "------pwd: "
-system("pwd")
 
-puts "------shopt:"
-system("which shopt")
-
-_shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR"
-system("bash #{_shellScript}")
 
 $stdout.sync = true
 $stderr.sync = true
@@ -34,3 +27,9 @@ build_dir = ARGV[0]
 JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exception %s') do |buildpack|
   buildpack.compile
 end
+
+puts "------pwd: "
+system("pwd")
+
+_shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR $build_dir /tmp/buildpacks"
+system("bash #{_shellScript}")
