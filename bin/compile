@@ -21,7 +21,7 @@ puts "------shopt:"
 system("which shopt")
 
 _shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR"
-system( _shellScript )
+system("bash #{_shellScript}")
 
 $stdout.sync = true
 $stderr.sync = true
