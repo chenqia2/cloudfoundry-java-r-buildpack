@@ -28,8 +28,5 @@ JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exceptio
   buildpack.compile
 end
 
-puts "------build_dir: "
-puts "#{build_dir}"
-
 _shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR #{build_dir} /tmp/buildpacks"
 system("bash #{_shellScript}")
