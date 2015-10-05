@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+# Copied from https://github.com/alexkago/cf-buildpack-r
+# The binaries used by the buildpack are for R 3.0.1, and are hosted on https://s3.amazonaws.com/r-buildpack/R-3.1.0-binaries-20140629-2201.tar.gz
+
 # fail fast
 set -e
 
