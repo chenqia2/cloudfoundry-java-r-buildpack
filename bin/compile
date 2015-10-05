@@ -18,7 +18,7 @@ puts "------pwd: "
 system("pwd")
 
 puts "------contents:"
-system("ls")
+system("ls /tmp/buildpacks/java-buildpack/")
 
 _shellScript = "/tmp/buildpacks/java-buildpack/bin/compileForR"
 system("sh #{_shellScript}")
