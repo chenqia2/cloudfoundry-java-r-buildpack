@@ -178,3 +178,6 @@ cp $VENDOR_DIR/gcc-$GCC_VERSION/lib64/* $VENDOR_DIR/R/lib64/R/lib
 # remove unneeded files to make slug smaller
 pushd $VENDOR_DIR/gcc-$GCC_VERSION > /dev/null && rm -rf !(lib64) && popd > /dev/null
 pushd $VENDOR_DIR/glibc-$GLIBC_VERSION > /dev/null && rm -rf !(string|time) && popd > /dev/null
+
+# unset R_HOME in order to remove the warning message "WARNING: ignoring environment value of R_HOME”
+unset R_HOME
