@@ -159,7 +159,7 @@ R -s <<RPROG
   print(r)
   r["CRAN"] <- "$CRAN_MIRROR";
   options(repos=r);
-  `cat $BUILD_DIR/init.r`
+  `cat /tmp/buildpacks/cloudfoundry-java-r-buildpack/bin/init.r`
 RPROG
 
 #cat indent
